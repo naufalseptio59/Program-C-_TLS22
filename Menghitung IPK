@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double IPK, total, rata, jumlah;
+    total=0;
+    for (int i=1; i<=8; i++) {
+        cout << "Masukkan IPK semester ke " << i << " : " << endl;
+        cin >> IPK;
+        total=total+IPK;
+        if (i==8)
+        {rata=total/i;
+        }
+    }
+    if (rata > 3.5 && rata <= 4.0)
+        cout << "Anda dinyatakan LULUS dengan IPK " << rata << " dan mendapatkan predikat CUM LAUDE";
+    else if (rata > 2.5 && rata < 3.5)
+        cout << "Anda dinyatakan LULUS dengan IPK " << rata;
+    else if (rata < 2.5) 
+        cout << "Anda dinyatakan TIDAK LULUS";
+    else
+        cout << "Data tidak sesuai";
+    
+    return 0;
+}
